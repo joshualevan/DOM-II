@@ -39,6 +39,11 @@ form.addEventListener('focus', backgroundYellow, true);
 form.addEventListener('blur', backgroundWhite, true);
 
 //resize
+const windowSize = (e) => {
+    console.log(`browser height: ${window.innerHeight}px browser width: ${window.innerWidth}px`)
+}
+
+window.addEventListener('resize', windowSize);
 
 //scroll
 
