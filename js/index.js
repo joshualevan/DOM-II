@@ -20,7 +20,7 @@ const enterKey = e => {
 document.addEventListener('keydown', enterKey);
 
 //load
-
+window.onload = () => alert("This Page has loaded");
 //focus
 
 //resize
