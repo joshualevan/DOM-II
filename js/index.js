@@ -3,12 +3,14 @@
 const links = Array.from(document.links);
 const bus = document.querySelector(".intro img");
 const form = document.querySelector("form");
+const nav = document.querySelector("header");
 
 //mouse over
 const changeColor = e => e.target.style.color = "red";
 const colorBack = e => e.target.style.color = "black";
 
 links.forEach(link => link.addEventListener('mouseover', changeColor))
+//mouse leave
 links.forEach(link => link.addEventListener('mouseleave', colorBack))
 
 //keydown
@@ -36,6 +38,7 @@ const backgroundWhite = (e) => {
 }
 
 form.addEventListener('focus', backgroundYellow, true);
+//blur
 form.addEventListener('blur', backgroundWhite, true);
 
 //resize
@@ -50,5 +53,12 @@ window.addEventListener('resize', windowSize);
 //select
 
 //dblclick
+const changeBackgroundPink = e => {
+    if (e.target.style.backgroundColor === "pink"){
+        e.target.style.backgroundColor = "white";
+    } else {
+        e.target.style.backgroundColor = "pink";
+    }
+}
 
-// drag/ drop
+nav.addEventListener('dblclick', changeBackgroundPink)
