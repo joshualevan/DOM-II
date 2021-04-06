@@ -5,6 +5,7 @@ const bus = document.querySelector(".intro img");
 const form = document.querySelector("form");
 const nav = document.querySelector("header");
 const buttons = Array.from(document.querySelectorAll(".btn"));
+const page = document.querySelector('body');
 
 //mouse over
 const changeColor = e => e.target.style.color = "red";
@@ -54,7 +55,11 @@ const buttonAlert = e => alert(e.target.textContent);
 
 buttons.forEach(button => button.addEventListener('click', buttonAlert));
 
-//select
+//mousedown
+const serif = e => document.querySelector('p').style.fontFamily = "serif";
+
+page.addEventListener('mousedown', serif);
+
 
 //dblclick
 const changeBackgroundPink = e => {
