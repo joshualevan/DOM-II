@@ -4,6 +4,7 @@ const links = Array.from(document.links);
 const bus = document.querySelector(".intro img");
 const form = document.querySelector("form");
 const nav = document.querySelector("header");
+const buttons = Array.from(document.querySelectorAll(".btn"));
 
 //mouse over
 const changeColor = e => e.target.style.color = "red";
@@ -48,7 +49,10 @@ const windowSize = (e) => {
 
 window.addEventListener('resize', windowSize);
 
-//scroll
+//click
+const buttonAlert = e => alert(e.target.textContent);
+
+buttons.forEach(button => button.addEventListener('click', buttonAlert));
 
 //select
 
