@@ -54,6 +54,8 @@ window.addEventListener('resize', windowSize);
 const buttonAlert = e => alert(e.target.textContent);
 
 buttons.forEach(button => button.addEventListener('click', buttonAlert));
+buttons.forEach(button => button.addEventListener('click', e => e.stopPropagation));
+links.forEach(link => link.addEventListener('click', e => e.preventDefault()));
 
 //mousedown
 const serif = e => document.querySelector('p').style.fontFamily = "serif";
